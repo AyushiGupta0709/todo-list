@@ -1,0 +1,42 @@
+.main-container{
+    display: flex;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+    /* height: 100vh; */
+    margin-top: 10%;
+    width: 100%;
+}
+.todo-container{
+    width: 70%;
+    border: 1px solid black;
+}
+.search-input{
+    width: 60%;
+    padding: 10px;
+    border-radius: 15px;
+    border: 1px solid grey;
+    margin: 10px;
+}
+.all-items{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    flex-direction: column;
+}
+.add{
+    padding: 10px 30px;
+
+}
+.single-item{
+    width: 80%;
+    background-color: rgb(247, 195, 132);
+    color: black;
+    border: 1px solid rgb(0, 0, 0);
+    margin: 10px;
+    
+}
+li{
+   list-style-type: none;
+}
