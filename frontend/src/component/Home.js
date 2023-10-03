@@ -69,12 +69,12 @@ const postItem = async ()=>{
   },[]);
   // console.log(allData);
   return (
-    <div>
+    <>
       <div className='main-container'>
         <div className='todo-container'>
             <h3>ADD YOUR ITENS HERE</h3>
             <input type='text' className='search-input' placeholder='add items' value={searchValue}  onChange={(e)=>addItems(e)}/>
-            <button className='add' onClick={updating? ()=>updateTodo():()=>postItem()}>{updating ? "Update" : "Add"}</button>
+            <button className='button' onClick={updating? ()=>updateTodo():()=>postItem()}>{updating ? "Update" : "Add"}</button>
             <div className='all-items'>
           
                   {
@@ -83,9 +83,12 @@ const postItem = async ()=>{
                       return (
                         <>
                         <div className='single-item'>
+
                         <li>{text}</li>
-                        <button className='edit-button' onClick={()=>editItem(_id)}>EDIT</button>
-                        <button className='delete-button' onClick={()=>deleteItem(_id)}>DELETE</button>
+                        <div>
+                        <button className='button' onClick={()=>editItem(_id)}>EDIT</button>
+                        <button className='button' onClick={()=>deleteItem(_id)}>DELETE</button>
+                        </div>
                         </div>
                           
                         </>
@@ -100,7 +103,7 @@ const postItem = async ()=>{
         </div>
       </div>
 
-    </div>
+    </>
   )
 }
 
